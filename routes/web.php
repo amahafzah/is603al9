@@ -18,19 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/contact', function(){
-    return view ('contact');
-})->name('contact');
-Route::get('/about', function(){
-    return view ('about');
-})->name('about');
-
-
-Route::get('/thanks/{name}', 'PagesController@thanks')->name('thanks');
-
-Route::post('/contact', 'PagesController@store')->name('contact.store');
